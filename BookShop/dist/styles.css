@@ -1,0 +1,623 @@
+/* Общие стили */
+body {
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+
+.container {
+  width: 80%;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+header {
+  background-color: #FFF;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 1120px;
+  height: 116px;
+}
+
+.header__logo {
+  color: #1C2A39;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  z-index: 20;
+}
+
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  gap: 2rem;
+}
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #5C6A79;
+}
+.nav-link:hover {
+  font-weight: 900;
+  color: #1C2A39;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.header-icons__bag {
+  position: relative;
+  
+}
+
+.header-icons__bag-quantity {
+  width: 13px;
+  height: 13px;
+  background-color: #FF353A;
+  border-radius: 100%;
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  
+}
+
+.header-icons__burger {
+  display: none;
+  
+}
+
+@media (max-width: 767px) {
+  .header-icons__burger {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 15px;
+    
+  }
+  .header-icons__burger::before {
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #1C2A39;
+    border-radius: 5px;
+    
+    }
+  .header-icons__burger span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #1C2A39;
+    border-radius: 5px;
+    
+  }
+  .header-icons__burger::after {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #1C2A39;
+    border-radius: 5px;
+    
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30%;
+    height: 15%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 110px 15px 0px 0px;
+    transition: right 0.3s ease 0s;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 5px;
+  }
+  .nav::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 116px;
+    background-color: #FFF;
+  }
+  .nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+  }
+  .nav-link:hover {
+    font-weight: 900;
+    color: #5C6A79;
+  }
+  .nav._active {
+    right: 0;
+  }
+}
+
+.slider-box {
+  position: static;
+  /*Top: 116px*/
+  
+}
+
+.slide {
+  display: none;
+  width: 80%;
+  height: auto;
+}
+
+.slide.active {
+  display: block;
+}
+
+.dots {
+  justify-content: center;
+  margin-top: 10px;
+  position: static;
+  bottom: 30px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+.slide > img {
+
+  width: 100%;
+}
+
+
+
+/* Слайдер */
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.slidertest {
+  position: absolute;
+  right: 10%;
+  height: 100%;
+}
+.slider .block1 {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  background-color: #9E98DC;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.94px;
+  color: #1C2A39;
+  margin: 70px 0 0 0;
+  top: 0;
+  right: -80px;
+  cursor: pointer;
+  box-shadow: 0px 13px 10px -5px rgba(0, 0, 0, .2)
+}
+
+  .slider .block1 p, .slider .block1 img {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; }
+
+.slider .block2 {
+  display: inline-block;
+  width: 150px;
+  height: 270px;
+  position: absolute;
+  background-color: #FF8FE6;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.94px;
+  color: #1C2A39;
+  right: -168px;
+  bottom: 70px;
+  cursor: pointer;
+  box-shadow: 0px 13px 10px -5px rgba(0, 0, 0, .2)
+}
+  .slider .block2 p, .slider .block2 img {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; }
+
+.slider-box {
+  position: relative;
+  /*margin: 0 auto;*/
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 17px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.slider-content {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+}
+
+.slider-content__img {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center center;
+  height: 702px;
+}
+
+.slider-content__traidin {
+  position: absolute;
+  top: 79px;
+  right: 78px;
+  display: flex;
+  flex-direction: column;
+  width: 149px;
+  height: 204px;
+  background-color: #9E98DC;
+  color: #1C2A39;
+  text-decoration: none;
+  box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+  z-index: 5;
+  cursor: pointer;
+}
+.slider-content__traidin:hover {
+transform: scale(1.1);
+}
+.slider-content__traidin div {
+padding-left: 14%;
+padding-top: 102px;
+width: 100%;
+color: #1C2A39;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+text-align: left;
+}
+.slider-content__traidin svg {
+padding-left: 14%;
+}
+
+.slider-content__top-books {
+position: absolute;
+bottom: 70px;
+right: 0px;
+display: flex;
+flex-direction: column;
+width: 137px;
+height: 273px;
+background-color: #FF8FE6;
+color: #1C2A39;
+text-decoration: none;
+box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+cursor: pointer;
+z-index: 5;
+}
+.slider-content__top-books:hover {
+transform: scale(1.1);
+}
+.slider-content__top-books div {
+padding-left: 14%;
+padding-top: 149px;
+width: 100%;
+color: #1C2A39;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+text-align: left;
+}
+.slider-content__top-books svg {
+padding-left: 14%;
+}
+
+
+/* Точки */
+
+.dots {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.dot {
+opacity: 0.3;
+}
+
+.dot:hover {
+opacity: 1 !important;
+transform: scale(1.1);
+}
+
+/* Книги */
+
+
+@media (min-width: 500px) {
+  .books-categories {
+    position: absolute;
+    left: 0;
+  }
+  .div_shelf_of_books {
+    width: 80%;
+  }
+  .shelf_of_books {
+     /* Используем CSS Grid для размещения книг */
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 22%;
+  }
+  .book {
+    column-gap: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .books-categories {
+    width: 100%;
+  }
+  .books-content {
+    flex-direction: column;
+  }
+  .book {
+    column-gap: 10px;
+  }
+  .shelf_of_books {
+    justify-content: center;
+  }
+
+}
+@media (max-width: 1100px) and (min-width: 500px) {
+  .books-categories {
+    width: 50%;
+  }
+}
+@media (max-width: 1100px) {
+
+  .books-categories ul {
+    padding-left: 35%;
+  }
+  .shelf_of_books {
+    /* Используем CSS Grid для размещения книг */
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .books-content {
+     justify-content: flex-end;
+  }
+  .slidertest {
+    display: none;
+  }
+
+}
+@media (min-width: 1100px) {
+  .books-content {
+    justify-content: center;
+  }
+  .books-categories {
+    width: 35%;
+  }
+  .books-categories ul {
+    padding-left: 50%;
+  }
+}
+
+.books-content {
+  display: flex;
+  width: 100%;
+}
+
+.books-categories {
+  /*width: 29%;*/
+  height: 710px;
+  background-color: #EFEEF6;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: capitalize;
+  color: #5C6A79;
+
+}
+.books-categories ul {
+  width: 50%;
+  height: 93%;
+  /*padding-left: 30%;*/
+  margin-top: 45px;
+
+}
+.books-categories ul li {
+  cursor: pointer;
+  padding-bottom: 23px;
+  position: relative;
+  list-style: none;
+}
+.books-categories ul li .btn-category {
+  border: none;
+  background: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.books-categories ul li:hover, .books-categories ul li:active {
+  color: #1C2A39;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.books-categories ul li:hover::before, .books-categories ul li:active::before {
+  content: "•";
+  color: #756AD3;
+  position: absolute;
+  left: -15px;
+}
+
+.shelf_of_books {
+  display: grid; /* Используем CSS Grid для размещения книг */
+  /*grid-template-columns: repeat(2, 1fr); !* Устанавливаем две колонки *!*/
+  gap: 70px 60px; /* Расстояние между книгами */
+  padding: 20px; /* Внутренний отступ */
+  position: relative;
+
+}
+
+.book-card {
+  display: flex;
+  height: 300px;
+  font-size: 10px;
+}
+
+.book-card__img {
+  /* background-image: url('../images/book-img.png'); */
+  background-size: cover;
+  width: 212px;
+  height: 300px;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+}
+.bookElementImage > img {
+  box-shadow: 0px 13px 10px -5px rgba(0, 0, 0, .2);
+  width: 150px;
+}
+/*.books-content {*/
+/*  justify-content: center;*/
+/*}*/
+
+/* Кнопка загрузки дополнительных книг */
+.load_more {
+  cursor: pointer;
+  width: 176px;
+  height: 45px;
+  top: 2186px;
+  left: 741px;
+  gap: 0px;
+  margin: 0 auto;
+  display: block;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background: #ffffff;
+  border: 1px solid rgba(76, 61, 178, 1)
+  
+   }
+    
+
+/* Рейтинг */
+    .rating {
+      font-size: 24px; 
+      color: orange; 
+      }
+
+      /* Кнопка Buy now */
+      .buy {
+        
+        width: 176px;
+        height: 45px;
+        top: 2186px;
+        left: 741px;
+        gap: 0px;
+        border: 1px 0px 0px 0px;
+        opacity: 0px;
+        background: #ffffff;
+        border: 1px solid rgba(76, 61, 178, 1);
+        cursor: pointer;
+      }
+      
+
+            .shop_bag {
+              position: relative;
+            }
+      
+            .badge {
+              position: absolute;
+              top: 0; 
+              right: 0; 
+              background-color: red; 
+              color: white;
+              border-radius: 100%; 
+              padding: 5px 10px;  
+              font-size: 14px;     
+              display: none;
+              font-size: 5px;
+          }
+
+ 
+
+.btn-category.active {
+  background-color: blue; /* Цвет для активной категории */
+  color: rgb(0, 0, 0); /* Цвет текста для активной категории */
+  border: 1px solid darkblue; /* Возможно, изменить границу */
+  font-weight: bold; /* Жирный шрифт для выделения */
+        }

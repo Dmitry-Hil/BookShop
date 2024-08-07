@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bookshop </title>
+    <link rel="stylesheet" href="./dist/styles.css">
+    </head>
+
+<body>
+
+        <header id="header">
+            <div class="header__wrapper"><a class="header__logo" href="#" alt="logo">Bookshop</a>
+                <nav class="nav-menu">
+                    <ul class="nav">
+                        <li class="nav-item"> <a class="nav-link" href="#">books</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">audiobooks</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Stationery & gifts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">blog</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <img src="./src/images/icons/user.svg" alt="user">
+                    <img src="./src/images/icons/search.svg" alt="search">
+                    <div class="shop_bag">
+                    <img src="./src/images/icons/shop_bag.svg" alt="shop_bag"><span class="badge" id="cart-count">0</span>
+                </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+        <main>
+            <div class="main-container">
+                <section class="slider">
+                    <div class="slider-content">
+                        <div class="slider-box">
+
+                            <img class="slide" src="./src/images/banner1.png"></img>
+                            <img class="slide" src="./src/images/banner2.png"></img>
+                            <img class="slide" src="./src/images/banner3.png"></img>
+                            <div class="slider-dots">
+                                <img class="dot dot-1" src="./src/images/icons/dot.svg" alt="dot"></img>
+                                <img class="dot dot-2" src="./src/images/icons/dot.svg" alt="dot"></img>
+                                <img class="dot dot-3" src="./src/images/icons/dot.svg" alt="dot"></img>
+                            </div>
+
+
+                        </div>
+                        <div class = "slider slidertest">
+                            <div class="images"></div>
+                            <a class="block2">
+                                <p>TOP <br>100 <br>BOOKS <br>2022</p>
+                                <img src="./src/images/arrow.png" alt="row">
+                            </a>
+                            <a class="block1">
+                                <p>CHANGE <br>OLD BOOK <br>ON NEW</p>
+                                <img src="./src/images/arrow.png" alt="row">
+                            </a>
+
+
+
+                        </div>
+
+                    </div>
+                </section>
+                <section class="books">
+                        <div class="books-content">
+                        <aside class="books-categories">
+                            <ul>
+                                <li class = "btn-category category-active">Architecture</li>
+                                <li class = "btn-category">Art & Fashion</li>
+                                <li class = "btn-category">Biography</li>
+                                <li class = "btn-category">Business</li>
+                                <li class = "btn-category">Crafts & Hobbies</li>
+                                <li class = "btn-category">Drama</li>
+                                <li class = "btn-category">Fiction</li>
+                                <li class = "btn-category">Food & Drink</li>
+                                <li class = "btn-category">Health & Wellbeing</li>
+                                <li class = "btn-category">History & Politics</li>
+                                <li class = "btn-category">Humor</li>
+                                <li class = "btn-category">Poetry</li>
+                                <li class = "btn-category">Psychology</li>
+                                <li class = "btn-category">Science</li>
+                                <li class = "btn-category">Technology</li>
+                                <li class = "btn-category">Travel & Maps</li>
+                            </ul>
+
+                        </aside>
+<!--                        <div class="book-card">-->
+<!--                            <div class="book-card__img" style="background-image: url('imageUrl');"></div>-->
+<!--                         -->
+<!--                          </div>-->
+                        <div class="div_shelf_of_books">
+                            <div class="shelf_of_books"></div>
+                            <button class="load_more">Load more</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="./dist/bundle.js"></script>
+</html>
